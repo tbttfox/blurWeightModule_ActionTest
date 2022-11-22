@@ -9,8 +9,3 @@ add_subdirectory(submodules/blurSkin)
 add_subdirectory(submodules/brSkinBrush)
 add_subdirectory(submodules/wireframeDisplay)
 
-# Python Submodules
-add_subdirectory(submodules/mPaintEditor)
-add_subdirectory(submodules/mWeightEditor)
-
-install(FILES ${PROJECT_NAME}.mod DESTINATION .)

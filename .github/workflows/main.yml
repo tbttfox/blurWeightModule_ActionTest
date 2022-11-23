@@ -232,6 +232,8 @@ jobs:
           mkdir -p modules/blurWeightModule/scripts
           cp -r ./submodules/mPaintEditor/mPaintEditor modules/blurWeightModule/scripts
           cp -r ./submodules/mWeightEditor/mWeightEditor modules/blurWeightModule/scripts
+          cp -r ./submodules/brSkinBrush/moduleData/icons modules/blurWeightModule
+          cp -r ./submodules/brSkinBrush/moduleData/scripts modules/blurWeightModule
           zip -r blurWeightModule-${{env.RELEASE_VERSION}}.zip modules/
 
       - name: Upload distribution
@@ -243,8 +245,7 @@ jobs:
           files: |
             blurWeightModule-*.zip
 
-      - name: Debug with tmate on failure
-        if: ${{ failure() }}
-        uses: mxschmitt/action-tmate@v3
-
+     # - name: Debug with tmate on failure
+     #   if: ${{ failure() }}
+     #   uses: mxschmitt/action-tmate@v3
 
